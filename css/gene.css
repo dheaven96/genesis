@@ -1,0 +1,79 @@
+/* 웹폰트 링크 */
+@font-face { 
+   font-family: genesans_head;
+   src: url(../font/GenesisSansHeadKRRegular.0c3d379.woff2)} 
+   
+/* 타이포그래피 */
+
+/*  <분석>
+font-family: ; font-size: ; line-height: ; font-weight: ; letter-spacing: ;
+
+h1 {font-family: NanumSquare-EB; font-size: 36px; font-weight: 400; letter-spacing: -1;}
+h2 {font-family: NanumSquare-B; font-size: 32px; line-height: 44.8px; font-weight: 400;}
+h3 {font-family: NanumSquare-EB; font-size: 28px; line-height: 39.2px; letter-spacing: -1.7;}
+h4 {font-family: NanumSquare-EB; font-size: 22px; line-height: 30.8px;}
+h5 {font-family: NanumSquare-EB; font-size: 18px; line-height: 25.2px;}   
+h6 {font-family: NanumSquare-B; font-size: 16px; line-height: 22.4px;}  */
+
+/* color */
+.color_bl {color: black;}
+.color_wh {color: white;}
+.color_gr {color: gray;}
+
+
+body {background-color: black;}
+
+/* 헤더 */
+header {width: 100%; height: 100px; position: fixed; z-index: 100; top: 0; left: 0; color: white; background-color: black;}
+
+/* gnb */
+#gnb { height: 100px; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; padding: 0 120px 0 120px;}
+
+ .gnb_left {width: 180px; height: 40px; margin-right: 50px;}
+  .header_logo {display: block; width: 100%; height: 100%; background: url(../img/logo-header.png) 50% no-repeat; text-decoration: none; background-size: contain;}
+
+ .gnb_center {width: auto; height: 100%; display: flex; justify-content: flex-start; align-items: center;}
+  .gnb_menu {width: auto; height: 100%; padding-right: 70px; display: flex; justify-content: flex-start; align-items: center;}
+   .gnb_menu a {}
+   
+ .gnb_right {width:60px; height: 100%; display: flex; justify-content: center; align-items: center;}
+  .gnb_right a {height: 26px; font-size: 14px; border-bottom: 1px solid white;}
+
+ #gnb a:hover {color:#CD9980}
+
+
+
+
+/* lnb */
+    .lnb_menu {width: 100%; background-color: #1ec545; position: fixed; z-index: 100; top: 78px; left: 0; height: 0px; display: flex; justify-content: center; overflow: hidden; transition: height 0.4s}
+     .lnb_menu dl {width: 190px; height: 276px; padding: 28px 0 0; border-left: 1px solid #ffffff38; transition: background-color 0.3s}
+     .lnb_menu dl:last-child {border-right: 1px solid #ffffff38;}
+
+     .lnb_menu dl:hover {background-color: #00000013;}
+     .lnb_menu dl a:hover {color: white; cursor: pointer;}
+
+      .lnb_menu dt {padding-left: 28px; margin-bottom: 14px; color: white;}
+      .lnb_menu dd {padding-left: 28px; margin-bottom: 5px; color: #ffffffa4;}
+      .classify {padding-bottom: 22px; margin-bottom: 22px; border-bottom: 1px solid #ffffff38;}
+      
+
+/* 메인 */
+/* hero_container */
+ .hero_container {width: 100%; height: 100vh;}
+  .hero_bg {width: 100%; height: 100%; background: url(../img/1920x750-keyvisual-C01-overview-the-all-new-genesis-g80-1.jpg) 100% no-repeat; }
+
+
+
+
+
+
+/* footer  */
+footer {padding: 0 30px; width: 100%; height: 160px; background-color: #f8f9fa; display: flex; justify-content: space-between; align-items: center; position: relative;}
+
+.footer_left {width: 400px; height: 30px; display: flex;}
+ .footer_left ul {display: flex;}
+.footer_right {width: 130px; height: 13px;}
+
+.footer_logo {width: 63px; height: 13px; background-image: url(../img/footer_logo.png);}
+.footer_copy {width: 337px; height: 16px; background-image: url(../img/footer_copy.png); position: absolute; bottom: 76px; left: calc(50% - 168.5px);}
+
