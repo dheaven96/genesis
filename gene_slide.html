@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>제네시스(GENESIS)</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="제네시스(GENESIS) G70, G80, GV80, G90 | 제네시스 공식 웹 사이트">
+  <meta name="keywords" content="제네시스, GENESIS, G70, G80, GV80, G90">
+  <meta name="author" content="Hevin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<!-- css링크 -->
+<link rel="stylesheet" type="text/css" href="css/destyle.css"><!-- 브라우저 초기화 -->
+
+<!-- CSS -->
+<style>
+  body {background-color: black;}
+
+  .slide_container {width: 100%; height: 56.25vw; margin: 0 auto; position:relative; margin-top: 72px; overflow: hidden; background-color: #CD9980;}
+
+  .myslide {width: 100%; height: 100%; font-size: 50px; display: block; position: absolute; top: 0; left: 100%;}
+
+    .myslide:nth-child(1) {left: 0px; z-index: 1;}
+    .myslide:nth-child(2) {left: 100%; z-index: 2;}
+    .myslide:nth-child(3) {left: 100%; z-index: 3;}
+    .myslide:nth-child(4) {left: 100%; z-index: 4;}
+    .myslide:nth-child(5) {left: 100%; z-index: 5;}
+
+  .myslide1_bg, .myslide2_bg, .myslide3_bg, .myslide4_bg, .myslide5_bg {width: 100%; height: 100%; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; padding: 0 150px;}
+
+  .myslide1_bg {background-image: url(img/carousel01.jpg);}
+  .myslide2_bg {background-image: url(img/carousel02.jpg);}
+  .myslide3_bg {background-image: url(img/carousel03.jpg);}
+  .myslide4_bg {background-image: url(img/carousel04.jpg);}
+  .myslide5_bg {background-image: url(img/carousel05.jpg);}
+
+  ext {width: 75px; height: 30px; font-size: 400px; line-height: 30px; color: white; border-bottom: 1px solid white; position: absolute; top: 50%; left: 50px;}
+
+  .button_prev {position: absolute; bottom: 316px; left: 70px; width: 46px; height: 46px; background-image: url(img/sprite.png); background-position: -296px -99px; opacity: 0.4; transition: opacity 0.3s;}
+   .button_prev:hover {opacity: 1;}
+    
+  .button_next {position: absolute; bottom: 316px; right: 70px; width: 46px; height: 46px; background-image: url(img/sprite.png); background-position: -346px -99px; opacity: 0.4; transition: opacity 0.3s;}
+   .button_next:hover {opacity: 1;}
+
+  .slide_bar_bg {position: absolute; bottom: 2px; left: 0px; height: 4px; width: 100%; border-top: 4px solid #555558; margin-bottom: 20px; z-index: 500;}
+   .slide_bar {position: absolute; top: -4px; left: 0px; height: 4px; width: 25%; border-top: 4px solid #CD9980; margin-bottom: 20px; }
+
+  .button_container {position: absolute; bottom: 50px; left: calc(50% - 60px); width: 120px; height: 12px; display: flex; justify-content: space-between; align-items: center; z-index: 500;}
+   .button_point {width: 9px; height: 9px; background-color: white; border-radius: 50%; opacity: 0.6; transition: opacity 0.3s; cursor: pointer;}
+   .button_point:hover {opacity: 1;}
+  
+
+</style>
+</head>
+
+
+<body>
+
+  <div class="slide_container"> <!-- 슬라이드 컨테이너 시작 -->
+
+    <div class="myslide">
+        <div class="myslide1_bg">
+            <!--<div class="text">1</div>-->
+        </div>
+    </div>
+
+    <div class="myslide">
+        <div class="myslide2_bg">
+            <!--<div class="text">2</div>-->
+        </div>
+    </div>
+
+    <div class="myslide">
+        <div class="myslide3_bg">
+            <!--<div class="text">2</div>-->
+        </div>
+    </div>
+
+    <div class="myslide">
+        <div class="myslide4_bg">
+            <!--<div class="text">2</div>-->
+        </div>
+    </div>
+
+    <div class="myslide">
+        <div class="myslide5_bg">
+            <!--<div class="text">2</div>-->
+        </div>
+    </div>
+
+
+    <div class="slide_bar_bg">   <!-- 슬라이드 바 -->
+        <span class="slide_bar" id="nowslide_bar"></span>
+    </div>
+
+    <div class="button_container"> <!-- 슬라이드 버튼-->
+        <a class="button_point" onclick="slideMove(0)"></a>
+        <a class="button_point" onclick="slideMove(1)"></a>
+        <a class="button_point" onclick="slideMove(2)"></a>
+        <a class="button_point" onclick="slideMove(3)"></a>
+        <a class="button_point" onclick="slideMove(4)"></a>
+    </div>
+    
+  </div> <!-- 슬라이드 컨테이너 끝 -->
+
+
+
+<!-- JS 시작 -->
+<script>
+
+  var currentSlideIndex = 0;  // 1번 슬라이드를 0으로 정의
+  var nextSlideIndex;  // 사용자가 클릭한 슬라이드의 넘버, 0에서 시작
+  var mySlide = document.getElementsByClassName("myslide");
+  var buttonPoint = document.getElementsByClassName("button_point");
+
+    console.log ("currentSlideIndex:" + currentSlideIndex);
+    console.log ("nextSlideIndex:" + nextSlideIndex);
+
+   window.onload = function() {
+    buttonPoint[0].addEventListener ('click',function(){ slideMove(0)});  
+    buttonPoint[1].addEventListener ('click',function(){ slideMove(1)}); 
+    buttonPoint[2].addEventListener ('click',function(){ slideMove(2)}); 
+    buttonPoint[3].addEventListener ('click',function(){ slideMove(3)}); 
+    buttonPoint[4].addEventListener ('click',function(){ slideMove(4)});  
+    };
+
+    var slideInter = setInterval(slideAuto, 2000);
+
+    function slideAuto() {
+
+      if (currentSlideIndex == mySlide.length - 1) {
+        clearInterval(slideInter);
+      }
+
+      mySlide[nextSlideIndex].style = "left: 0px; transition: left 0.5s;";
+
+      setTimeout(function(){mySlide[currentSlideIndex].style = "left: -100%;";}, 500);
+      setTimeout(function(){nextSlideIndex = nextSlideIndex +1; currentSlideIndex = nextSlideIndex;}, 800);
+    }
+   
+
+
+    function slideMove(clickIndex) {
+
+//여기부터 문제잇음
+
+     clearInterval(slideInter);
+
+      buttonPoint[0].removeEventListener ('click',function(){ slideMove(0)});  
+      buttonPoint[1].removeEventListener ('click',function(){ slideMove(1)}); 
+      buttonPoint[2].removeEventListener ('click',function(){ slideMove(2)}); 
+      buttonPoint[3].removeEventListener ('click',function(){ slideMove(3)}); 
+      buttonPoint[4].removeEventListener ('click',function(){ slideMove(4)});  
+
+     setTimeout(function() {
+      buttonPoint[0].addEventListener ('click',function(){ slideMove(0)});  
+      buttonPoint[1].addEventListener ('click',function(){ slideMove(1)}); 
+      buttonPoint[2].addEventListener ('click',function(){ slideMove(2)}); 
+      buttonPoint[3].addEventListener ('click',function(){ slideMove(3)}); 
+      buttonPoint[4].addEventListener ('click',function(){ slideMove(4)});  
+     }, 1000);
+
+//여기까지
+
+      nextSlideIndex = clickIndex;
+      indexDifference = nextSlideIndex - currentSlideIndex;
+
+      console.log ("currentSlideIndex:" + currentSlideIndex);
+      console.log ("nextSlideIndex:" + nextSlideIndex);
+
+
+      /* 오른쪽으로 이동 */
+      if (indexDifference == 1) {
+
+        for (i=0; i < mySlide.length; i++ ) { // 각 슬라이드  zindex값 셋팅
+          mySlide[i].style.zIndex = i + 1 ;
+           /* mySlide[0].style.zIndex = "1" ;
+            mySlide[1].style.zIndex = "2" ;
+            mySlide[2].style.zIndex = "3" ;
+            mySlide[3].style.zIndex = "4" ;
+            mySlide[4].style.zIndex = "5" ;*/
+        }
+
+        mySlide[nextSlideIndex].style = "left: 0px; transition: left 0.5s;";
+
+        setTimeout(function(){mySlide[currentSlideIndex].style = "left: -100%;"; currentSlideIndex = nextSlideIndex;}, 500);
+      }
+
+
+      /* 오른쪽으로 점프 */
+      else if (indexDifference > 1) {
+
+        for (i=0; i < mySlide.length; i++ ) { // 각 슬라이드  zindex값 셋팅
+          mySlide[i].style.zIndex = i + 1 ;         
+        }
+
+        for (i=0; i < indexDifference - 1; i++ ) {
+          mySlide[currentSlideIndex + i + 1].style = "left: -100%; transition: left 0.5s" + " " + i*0.1 + "s;";
+        }
+
+        mySlide[nextSlideIndex].style = "left: 0px; transition: left 0.5s" + " " + (indexDifference - 2)*0.1 + "s;";
+
+        setTimeout(function(){mySlide[currentSlideIndex].style = "left: -100%;"; currentSlideIndex = nextSlideIndex;}, 500 + (indexDifference - 2)*100);         
+      }
+
+
+      /* 왼쪽으로 이동 */
+      else if (indexDifference == -1) {    
+
+        console.log ("indexDifference:" + indexDifference);
+        console.log ("currentSlideIndex:" + currentSlideIndex);
+        console.log ("nextSlideIndex:" + nextSlideIndex);
+
+        for (i=0; i < mySlide.length; i++ ) { // 각 슬라이드  zindex값 셋팅
+          mySlide[i].style.zIndex = mySlide.length - i;
+            /*mySlide[0].style.zIndex = "5" ;
+           mySlide[1].style.zIndex = "4" ;
+           mySlide[2].style.zIndex = "3" ;
+           mySlide[3].style.zIndex = "2" ;
+           mySlide[4].style.zIndex = "1" ;*/
+        }
+
+        mySlide[nextSlideIndex].style = "left: 0px; transition: left 0.5s;" + "z-index:" + (5 - nextSlideIndex) + ";" ;
+          
+        setTimeout(function(){mySlide[currentSlideIndex].style = "left: 100%;"; currentSlideIndex = nextSlideIndex;}, 500);
+      }
+
+
+      /* 왼쪽으로 점프 */
+      else if (indexDifference < -1) {
+
+        for (i=0; i < mySlide.length; i++ ) { // 각 슬라이드  zindex값 셋팅
+          mySlide[i].style.zIndex = mySlide.length - i;
+        }
+
+        //중간 슬라이드 트렌지션
+        for (i=0; i < Math.abs(indexDifference) - 1; i++ ) {
+          mySlide[currentSlideIndex - i - 1].style = "left: 100%; transition: left 0.5s" + " " + i*0.2 + "s;";
+        }
+
+        //클릭된 슬라이드 이동
+        mySlide[nextSlideIndex].style = "left: 0px; transition: left 0.5s" + " " + (Math.abs(indexDifference) - 2)*0.2 + "s;";
+
+        //현재 슬라이드 이동 - 트렌지션 X
+        setTimeout(function(){mySlide[currentSlideIndex].style = "left: 100%;"; currentSlideIndex = nextSlideIndex;}, 500 );         
+      }
+
+
+      /*if (clickIndex == 4) {
+        //왼쪽으로 지나가는 슬라이드
+        mySlide[1].style = "left: -100%; transition: left 0.5s;";
+        mySlide[2].style = "left: -100%; transition: left 0.5s 0.1s;";
+        mySlide[3].style = "left: -100%; transition: left 0.5s 0.2s;";
+
+        // 가운데 화면으로 이동하는 슬라이드
+        mySlide[4].style = "left: 0px; transition: left 0.5s 0.2s;";  
+
+        // 현재 화면 슬라이드가 왼쪽으로 이동 - 백그라운드
+        setTimeout(function(){mySlide[0].style = "left: -100%;";}, 700);
+      }*/
+
+       //공통효과
+      for (i=0; i<mySlide.length; i++ ) {
+        document.getElementsByClassName("button_point")[i].style = "width: 6px; height: 6px; opacity: 0.6;";
+      }
+
+      document.getElementsByClassName("button_point")[clickIndex].style = "width: 9px; height: 9px; opacity: 1;";
+
+    }
+
+</script>
+ 
+</body> 
+
+
+
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>제네시스(GENESIS)</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="제네시스(GENESIS) G70, G80, GV80, G90 | 제네시스 공식 웹 사이트">
+  <meta name="keywords" content="제네시스, GENESIS, G70, G80, GV80, G90">
+  <meta name="author" content="Hevin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<!-- css링크 -->
+<link rel="stylesheet" type="text/css" href="css/destyle.css"><!-- 브라우저 초기화 -->
+<link rel="stylesheet" type="text/css" href="css/gene.css"><!-- genesis css 링크 -->
+
+</head>
+
+<body>
+  <!-- 헤더 시작 -->
+ <header>
+  <!-- gnb -->
+  <nav id="gnb">  
+
+    <div class="gnb_left">
+      <a href="gene.html" class="header_logo"></a>
+    </div>
+
+    <div class="gnb_center h6_menu">
+      <div class="gnb_menu" onmouseover="menuOpen(1)" onmouseout="menuClose()"><a>MODELS ∨</a></div>
+      <div class="gnb_menu" onmouseover="menuOpen(2)" onmouseout="menuClose()"><a>THE BRAND ∨</a></div>
+      <div class="gnb_menu" onmouseover="menuOpen(3)" onmouseout="menuClose()"><a>SHOPPING ∨</a></div>
+      <div class="gnb_menu" onmouseover="menuOpen(4)" onmouseout="menuClose()"><a>OWNERS ∨</a></div>
+      <div class="gnb_menu" onmouseover="menuOpen(5)" onmouseout="menuClose()"><a>DIGITAL ∨</a></div>
+    </div>
+
+    <div class="gnb_right">
+       <a href="https://www.navercorp.com" class="h5_logn ">SIGN IN</a>
+    </div>
+
+  </nav>
+
+  <!-- lnb 시작 -->  
+  <!-- Local_menu1 MODELS  -->
+  <ul class="lnb_menu" onmouseover="menuOpen(1)" onmouseout="menuClose()">
+      <li class="car_img"><a></a></li>
+      <li class="car_img"><a></a></li>
+      <li class="car_img"><a></a></li>
+      <li class="car_img"><a></a></li>
+  </ul> 
+
+  <ul class="lnb_menu" onmouseover="menuOpen(2)" onmouseout="menuClose()">
+    <li class="p2_small"><a>뉴스 및 이벤트</a></li>
+    <li class="p2_small"><a>CONCEPT CAR</a></li>
+    <li class="p2_small"><a>제네시스 스튜디오</a></li>
+    <li class="p2_small"><a>제네시스 모터쇼</a></li>
+    <li class="p2_small"><a>제네시스 로드 트립</a></li>
+ </ul> 
+
+ <ul class="lnb_menu" onmouseover="menuOpen(3)" onmouseout="menuClose()">
+    <li class="p2_small"><a>제네시스 구매 프로그램</a></li>
+    <li class="p2_small"><a>견적내기</a></li>
+    <li class="p2_small"><a>구매 상담 신청</a></li>
+    <li class="p2_small"><a>시승 신청</a></li>
+    <li class="p2_small"><a>제네시스 강남</a></li>
+    <li class="p2_small"><a>전시장 / 센터찾기</a></li>
+    <li class="p2_small"><a>카탈로그 / 가격표 다운로드</a></li>
+    <li class="p2_small"><a>FAQ</a></li>
+    <li class="p2_small"><a>사양 조회하기</a></li>
+ </ul> 
+
+ <ul class="lnb_menu" onmouseover="menuOpen(4)" onmouseout="menuClose()">
+    <li class="p2_small"><a>제네시스 멤버쉽</a></li>
+    <li class="p2_small"><a>제네시스 멤버스 몰</a></li>
+    <li class="p2_small"><a>오너스 매뉴얼 다운로드</a></li>
+    <li class="p2_small"><a>네비게이션 업데이트</a></li>
+    <li class="p2_small"><a>자동차 교환·환불 중재 제도 안내</a></li>
+ </ul> 
+
+ <ul class="lnb_menu" onmouseover="menuOpen(5)" onmouseout="menuClose()">
+    <li class="p2_small"><a>제네시스 커넥티드 서비스</a></li>
+    <li class="p2_small"><a>제네시스 디지털 키</a></li>
+    <li class="p2_small"><a>제네시스 카페이</a></li>
+    <li class="p2_small"><a>제네시스 빌트인 캠</a></li>
+    <li class="p2_small"><a>제네시스 카투홈/홈투카</a></li>
+ </ul> 
+
+ </header>
+
+
+ <!-- 메뉴 JS -->
+ <script> 
+   function menuOpen(openIndex) {
+     for (i=0; i<document.getElementsByClassName("lnb_menu").length; i++) {
+       document.getElementsByClassName("lnb_menu")[i].style="height: 0;";
+       document.getElementsByClassName("lnb_menu")[openIndex - 1].style="height: 340px;";
+     }
+   }
+ 
+   function menuClose () {
+     for (i=0; i<document.getElementsByClassName('lnb_menu').length; i++) {
+       document.getElementsByClassName('lnb_menu')[i].style="height: 0;";
+     }
+   }
+ </script>
+
+
+
+ <!-- main 시작 --> 
+ <main>
+    <section class="hero_container"> <!-- hero 컨테이너 시작 -->
+
+        <div class="hero_bg">
+            
+        </div>
+
+    </section>
+
+
+
+ </main>
+  
+
+
+
+ 
+</body> 
+
+
+
+</html>
