@@ -28,15 +28,9 @@
   <p id="result7"></p>
 
   <script>
-      var windowX = window.innerWidth;  //윈도우 넓이 = document.body.clientWidth;
-      var windowY = window.innerHeight;
-
-      var windowXx = screen.width; //헤상도
-      var windowYy = screen.height;
-
-      var windowXxx = screen.availWidth; //
-      var windowYyy = screen.availHeight;
-
+      var windowX = window.innerWidth;    var windowY = window.innerHeight;   //윈도우 넓이 = document.body.clientWidth;
+      var windowXx = screen.width;        var windowYy = screen.height;       //헤상도
+      var windowXxx = screen.availWidth;  var windowYyy = screen.availHeight; //
       var windowColor = screen.colorDepth;  //bit
     
       /*document.getElementById("result1").innerHTML = "Window Width is :" + windowX; 
@@ -50,9 +44,17 @@
 
       var windowHref = window.location.href; //파일의 url
       var windowHost = window.location.hostname; //서버네임
+      var windowPath = window.location.pathname; //
+      var windowProto = window.location.protocol; //프로토콜
+      var windowPort = window.location.port; //
+      
 
-      document.getElementById("result1").innerHTML = "href:" + windowHref; 
-      document.getElementById("result2").innerHTML = "서버네임:" + windowHost; 
+      document.getElementById("result1").innerHTML = "href :" + windowHref; 
+      document.getElementById("result2").innerHTML = "hostname :" + windowHost; 
+      document.getElementById("result3").innerHTML = "pathname :" + windowPath; 
+      document.getElementById("result4").innerHTML = "protocol :" + windowProto; 
+      document.getElementById("result5").innerHTML = "port :" + windowPort; 
+     
   </script>
 
 
