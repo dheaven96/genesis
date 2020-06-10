@@ -25,9 +25,10 @@
   <p id="result4"></p>
   <p id="result5"></p>
   <p id="result6"></p>
+  <p id="result7"></p>
 
   <script>
-      var windowX = window.innerWidth;  //넓이 = document.body.clientWidth;
+      var windowX = window.innerWidth;  //윈도우 넓이 = document.body.clientWidth;
       var windowY = window.innerHeight;
 
       var windowXx = screen.width; //헤상도
@@ -35,14 +36,23 @@
 
       var windowXxx = screen.availWidth; //
       var windowYyy = screen.availHeight;
+
+      var windowColor = screen.colorDepth;  //bit
     
       document.getElementById("result1").innerHTML = "Window Width is :" + windowX; 
       document.getElementById("result2").innerHTML = "Window Height is :" + windowY; 
-      document.getElementById("result3").innerHTML = "Window Width is :" + windowXx; 
-      document.getElementById("result4").innerHTML = "Window Height is :" + windowYy; 
-      document.getElementById("result5").innerHTML = "Window Width is :" + windowXxx; 
-      document.getElementById("result6").innerHTML = "Window Height is :" + windowYyy; 
-    
+      document.getElementById("result3").innerHTML = "Screen Width is :" + windowXx; 
+      document.getElementById("result4").innerHTML = "Screen Height is :" + windowYy; 
+      document.getElementById("result5").innerHTML = "Screen availWidth is :" + windowXxx; 
+      document.getElementById("result6").innerHTML = "Screen availHeight is :" + windowYyy; 
+      document.getElementById("result7").innerHTML = "Screen colorDepth is :" + windowColor; 
+
+
+      var windowHref = window.location.href; //파일의 url
+      var windowHost = window.location.hostname; //서버네임
+
+      document.getElementById("result1").innerHTML = "href:" + windowHref; 
+      document.getElementById("result2").innerHTML = "서버네임:" + windowHost; 
   </script>
 
 
