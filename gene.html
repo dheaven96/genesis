@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <title>제네시스(GENESIS)</title>
@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body onscroll="scrollFadeIn()">
   <!-- 헤더 시작 -->
  <header>
   <!-- gnb -->
@@ -33,55 +33,108 @@
     </div>
 
     <div class="gnb_right">
-       <a href="https://www.navercorp.com" class="h5_logn ">SIGN IN</a>
+       <a href="https://www.navercorp.com" class="h6_logn ">SIGN IN</a>
     </div>
 
   </nav>
 
-  <!-- lnb 시작 -->  
-  <!-- Local_menu1 MODELS  -->
-  <ul class="lnb_menu" onmouseover="menuOpen(1)" onmouseout="menuClose()">
-      <li class="car_img"><a></a></li>
-      <li class="car_img"><a></a></li>
-      <li class="car_img"><a></a></li>
-      <li class="car_img"><a></a></li>
-  </ul> 
 
-  <ul class="lnb_menu" onmouseover="menuOpen(2)" onmouseout="menuClose()">
-    <li class="p2_small"><a>뉴스 및 이벤트</a></li>
-    <li class="p2_small"><a>CONCEPT CAR</a></li>
-    <li class="p2_small"><a>제네시스 스튜디오</a></li>
-    <li class="p2_small"><a>제네시스 모터쇼</a></li>
-    <li class="p2_small"><a>제네시스 로드 트립</a></li>
- </ul> 
+<!-- lnb 시작 -->  
+<!-- Local_menu1 MODELS  -->
+  <div class="lnb_menu" onmouseover="menuOpen(1)" onmouseout="menuClose()">
+    <ul class="vehicle_wrap">
+      <li>
+        <h5>GENESIS</h5>
+        <h2>GV80</h2>
+        <span class="vehicle_img1"></span>
+        <div>
+          <a class="gene_button h6_button">EXPLORE</a>
+        </div>
+      </li>
+      <li>
+        <h5>GENESIS</h5>
+        <h2>G70</h2>
+        <span class="vehicle_img2"></span>
+        <div>
+          <a class="gene_button h6_button">EXPLORE</a>
+        </div>
+      </li>
+      <li>
+        <h5>GENESIS</h5>
+        <h2>G80</h2>
+        <span class="vehicle_img3"></span>
+        <div>
+          <a class="gene_button h6_button">EXPLORE</a>
+        </div>
+      </li>
+      <li>
+        <h5>GENESIS</h5>
+        <h2>G90</h2>
+        <span class="vehicle_img4"></span>
+        <div>
+          <a class="gene_button h6_button">EXPLORE</a>
+        </div>
+      </li>
+    </ul> 
+  </div>
 
- <ul class="lnb_menu" onmouseover="menuOpen(3)" onmouseout="menuClose()">
-    <li class="p2_small"><a>제네시스 구매 프로그램</a></li>
-    <li class="p2_small"><a>견적내기</a></li>
-    <li class="p2_small"><a>구매 상담 신청</a></li>
-    <li class="p2_small"><a>시승 신청</a></li>
-    <li class="p2_small"><a>제네시스 강남</a></li>
-    <li class="p2_small"><a>전시장 / 센터찾기</a></li>
-    <li class="p2_small"><a>카탈로그 / 가격표 다운로드</a></li>
-    <li class="p2_small"><a>FAQ</a></li>
-    <li class="p2_small"><a>사양 조회하기</a></li>
- </ul> 
+<!-- Local_menu2 THE BRAND  -->
+  <div class="lnb_menu" onmouseover="menuOpen(2)" onmouseout="menuClose()">
+    <ul class="h5_lnb">
+      <div class="lnb_menu_line">
+        <li><a>뉴스 및 이벤트</a></li>
+        <li><a>CONCEPT CAR</a></li>
+        <li><a>제네시스 스튜디오</a></li>
+        <li><a>제네시스 모터쇼</a></li>
+        <li><a>제네시스 로드 트립</a></li>
+      </div>
+    </ul> 
+  </div> 
 
- <ul class="lnb_menu" onmouseover="menuOpen(4)" onmouseout="menuClose()">
-    <li class="p2_small"><a>제네시스 멤버쉽</a></li>
-    <li class="p2_small"><a>제네시스 멤버스 몰</a></li>
-    <li class="p2_small"><a>오너스 매뉴얼 다운로드</a></li>
-    <li class="p2_small"><a>네비게이션 업데이트</a></li>
-    <li class="p2_small"><a>자동차 교환·환불 중재 제도 안내</a></li>
- </ul> 
+<!-- Local_menu3 SHOPPING  -->
+  <div class="lnb_menu" onmouseover="menuOpen(3)" onmouseout="menuClose()">
+    <ul class="h5_lnb">
+      <div class="lnb_menu_line">
+        <li><a>제네시스 구매 프로그램</a></li>
+        <li><a>카탈로그 / 가격표 다운로드</a></li>
+        <li><a>견적내기</a></li>
+        <li><a>구매 상담 신청</a></li>
+        <li><a>시승 신청</a></li>
+      </div>
+      <div class="lnb_menu_line">
+        <li><a>제네시스 강남</a></li>
+        <li><a>전시장 / 센터찾기</a></li>
+        <li><a>사양 조회하기</a></li>
+        <li><a>FAQ</a></li>
+      </div>
+    </ul> 
+  </div> 
 
- <ul class="lnb_menu" onmouseover="menuOpen(5)" onmouseout="menuClose()">
-    <li class="p2_small"><a>제네시스 커넥티드 서비스</a></li>
-    <li class="p2_small"><a>제네시스 디지털 키</a></li>
-    <li class="p2_small"><a>제네시스 카페이</a></li>
-    <li class="p2_small"><a>제네시스 빌트인 캠</a></li>
-    <li class="p2_small"><a>제네시스 카투홈/홈투카</a></li>
- </ul> 
+<!-- Local_menu4 OWNERS  -->
+  <div class="lnb_menu" onmouseover="menuOpen(4)" onmouseout="menuClose()">
+    <ul class="h5_lnb">
+      <div class="lnb_menu_line">
+        <li><a>제네시스 멤버쉽</a></li>
+        <li><a>제네시스 멤버스 몰</a></li>
+        <li><a>오너스 매뉴얼 다운로드</a></li>
+        <li><a>네비게이션 업데이트</a></li>
+        <li><a>자동차 교환·환불 중재 제도 안내</a></li>
+      </div>
+    </ul> 
+  </div> 
+
+<!-- Local_menu5 DIGITAL  -->
+  <div class="lnb_menu" onmouseover="menuOpen(5)" onmouseout="menuClose()">
+    <ul class="h5_lnb">
+      <div class="lnb_menu_line">
+        <li><a>제네시스 커넥티드 서비스</a></li>
+        <li><a>제네시스 디지털 키</a></li>
+        <li><a>제네시스 카페이</a></li>
+        <li><a>제네시스 빌트인 캠</a></li>
+        <li><a>제네시스 카투홈/홈투카</a></li>
+      </div>
+    </ul> 
+  </div> 
 
  </header>
 
@@ -91,7 +144,7 @@
    function menuOpen(openIndex) {
      for (i=0; i<document.getElementsByClassName("lnb_menu").length; i++) {
        document.getElementsByClassName("lnb_menu")[i].style="height: 0;";
-       document.getElementsByClassName("lnb_menu")[openIndex - 1].style="height: 340px;";
+       document.getElementsByClassName("lnb_menu")[openIndex - 1].style="height: 430px;";
      }
    }
  
@@ -106,19 +159,386 @@
 
  <!-- main 시작 --> 
  <main>
-    <section class="hero_container"> <!-- hero 컨테이너 시작 -->
 
-        <div class="hero_bg">
-            
+<!-- hero section -->
+  <section class="hero_container"> 
+
+    <div class="hero_line">
+      <div class="hero_content">
+        <div class="hero_title_wrap">
+          <h3>THE ALL-NEW GENESIS</h3>
+          <h1>G80</h1>
+        </div>
+        <div class="hero_button_wrap">
+          <a class="gene_button h6_button">자세히 보기</a>
+          <a class="gene_button h6_button">런칭 영상 보기</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+<!-- video section -->
+  <section class="video_container"> 
+    <iframe id="js_youtube" src="https://www.youtube.com/embed/PSgOtR6m0lQ" frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div id="poster_wrap">
+      <button class="video_button" onclick="playVid()">▶</button>
+    </div>
+  </section>
+
+  <!-- video button JS -->
+  <script>
+    var jsVideo = document.getElementById("js_youtube");
+
+    function playVid() {
+      document.getElementById("poster_wrap").style = "display:none";
+      jsVideo.play();
+    }
+  </script>
+
+
+<!-- slide section -->
+  <section class="slide_container"> 
+    <h6>INTERIOR</h6>
+
+    <div class="button_container">  <!-- 슬라이드 버튼-->
+      <a class="button_point" onclick="slideMove(0)"></a>
+      <a class="button_point" onclick="slideMove(1)"></a>
+      <a class="button_point" onclick="slideMove(2)"></a>
+      <a class="button_point" onclick="slideMove(3)"></a>
+      <a class="button_point" onclick="slideMove(4)"></a>
+    </div>
+
+    <div class="slide_bar_bg">   <!-- 슬라이드 바 -->
+      <span class="slide_bar" id="nowslide_bar"></span>
+    </div>
+
+  </section>
+
+
+<!-- overview section -->
+  <section class="overview_container">
+
+    <div class="overview_title_wrap">
+      <h3>GENESIS MODELS</h3>
+    </div>
+
+  <div class="overview_contents_wrap">
+    <ul class="vehicle_wrap js_vehicle_wrap" id="vehicle_ul">
+      <li id="vehicle1">
+        <h5>GENESIS</h5>
+        <h2>GV80</h2>
+        <span class="vehicle_img1"></span>
+        <div>
+          <a class="gene_button h6_button">EXPLORE</a>
+        </div>
+      </li>
+      <li id="vehicle2">
+        <h5>GENESIS</h5>
+        <h2>G70</h2>
+        <span class="vehicle_img2"></span>
+        <div>
+          <a class="gene_button h6_button">EXPLORE</a>
+        </div>
+      </li>
+      <li id="vehicle3">
+        <h5>GENESIS</h5>
+        <h2>G80</h2>
+        <span class="vehicle_img3"></span>
+        <div>
+          <a class="gene_button h6_button">EXPLORE</a>
+        </div>
+      </li>
+      <li id="vehicle4">
+        <h5>GENESIS</h5>
+        <h2>G90</h2>
+        <span class="vehicle_img4"></span>
+        <div>
+          <a class="gene_button h6_button">EXPLORE</a>
+        </div>
+      </li>
+
+      <a class="overview_etc h6_button color_gr">뉴스 및 이벤트 >></a>
+
+    </ul>  
+  </div> 
+
+  </section>
+
+
+<!-- brand section -->
+  <section class="brand_container"> 
+    <div class="brand_text_wrap">
+      <p>GENESIS</p>
+      <h3>THE BRAND</h3>
+      <h6 class="h6_company">제네시스는 높은 품격과 안목을 가진 사람들을 위한 최상의 자동차와 그에 관련된 제품 및 서비스를 만들어내고자 합니다.</h6>
+      <a class="gene_button h6_button">GENESIS 브랜드 알아보기</a>
+    </div>
+    <div class="brand_img"></div>
+  </section>
+
+
+<!-- awards fade section -->
+  <section class="awards_container"> 
+    <div class="awards_title_wrap">
+      <h3>GENESIS MOTOR SHOW & AWARDS</h3>
+    </div>
+
+    <ul class="awards_fade_container">
+
+      <li class="awards_page">
+        <div class="awards_text_box">
+          <h3 class="color_brown">IIHS TOP SAFETY PICK +</h3>
+          <h6>미국 고속도로 안전보험협회가 발표한 충돌 평가에서 가장 안전한 차량에<br> 부여하는 ‘톱 세이프티 픽 플러스(Top Safety Pick+)’에 G70, G80, G90<br> 제네시스 세단 전 차종이 최고 안전한 차로 선정되었습니다. <br>*G70의 경우 2019년 12월 이후 모델에 해당됩니다.</h6>
+        </div>
+      </li>
+      <li class="awards_page">
+        <div class="awards_text_box">
+          <h3 class="color_brown">NORTH AMERICAN CAR OF THE<br> YEAR 2019</h3>
+          <h6>G70가 디트로이트 모터쇼에서 '승용부문 북미 올해의 차'를 수상하였습니다.</h6>
+          <a class="h6_button">자세히 보기</a>
+        </div>      
+      </li>
+      <li class="awards_page">
+        <div class="awards_text_box">
+          <h3 class="color_brown">NEW YORK<br>AUTO SHOW 2019</h3>
+          <h6>뉴욕 모터쇼 전야 허드슨 야드에서 ‘스몰 카, 빅 애플(Small Car, Big Apple)’의<br> 테마로 프리미엄 씨티카 ‘민트 콘셉트’의 언베일링 행사가 열렸습니다.</h6>
+          <a class="h6_button">자세히 보기</a>
+        </div>
+      </li>    
+      <li class="awards_page">
+        <div class="awards_text_box">
+          <h3 class="color_brown">SEOUL<br>MOTOR SHOW 2019</h3>
+          <h6>제네시스 커먼부스가 2018 레드닷 어워드 ‘커뮤니케이션 디자인’ 부문을<br> 수상하였습니다.</h6>
+          <a class="h6_button">자세히 보기</a>
+        </div>
+      </li>  
+      <li class="awards_page">
+        <div class="awards_text_box">
+          <h3 class="color_brown">BUSAN<br>MOTOR SHOW 2018</h3>
+          <h6>부산 모터쇼 제네시스관에서 아시아 최초로 공개되는 2 도어 전기차 기반 GT<br> 콘셉트카, 에센시아 콘셉트와 제네시스 전차종 라인업이 전시되었습니다.</h6>
+          <a class="h6_button">자세히 보기</a>
+        </div>
+      </li> 
+     
+      <nav class="awards_nav_wrap">
+        <div class="awards_slide_bar_bg">
+          <span class="awards_slide_bar" id="awards_nowslide_bar"></span>
         </div>
 
-    </section>
+        <ul class="awards_nav_text">
+          <li class="text_button" onclick="fadePage(0)">IIHS TOP SAFETY PICK +</li>
+          <li class="text_button" onclick="fadePage(1)">NORTH AMERICAN CAR OF THE YEAR 2019</li>
+          <li class="text_button" onclick="fadePage(2)">NEW YORK<br> AUTO SHOW 2019</li>
+          <li class="text_button" onclick="fadePage(3)">SEOUL<br> MOTOR SHOW 2019</li>
+          <li class="text_button" onclick="fadePage(4)">BUSAN<br>MOTOR SHOW 2018</li>
+        </ul>    
+      </nav>
+      
+    </ul>
 
 
+<!-- fade JS -->
+    <script>
+      var awardsIndex; 
+      var awardsPage = document.getElementsByClassName("awards_page");
+      var textButton = document.getElementsByClassName("text_button");
+    
+      function fadePage(awardsIndex) {
+        /*배경 페이드 변화*/
+        for (i=0; i<awardsPage.length; i++) {
+          awardsPage[i].style = "z-index:0; opacity:0";
+        }
+        awardsPage[awardsIndex].style ="z-index:1; opacity:1; transition:all 0.6s";
 
- </main>
+        /*current Bar */
+        currentBar = awardsIndex * 17 ;
+        document.getElementById("awards_nowslide_bar").style.left = currentBar + "%"; 
+
+        /*텍스트 버튼 컬러 변경*/
+        for (i=0; i<textButton.length; i++) {
+          textButton[i].style = "color:white";
+        }
+          textButton[awardsIndex].style = "color:#CD9980"; 
+        
+      }    
+    </script>
+
+  </section>  
+
+
+<!-- related section -->
+  <section class="related_container"> 
+    <ul id="card_ul" class="card_wrap">
+
+      <li id="card1">
+        <img src="img/Genesis_KR_Home_Content_01_C15_630x358.jpg">
+        <h5 class="h5_400">GENESIS OWNERS</h5>
+        <h6>제네시스 오너분들께만 주어지는 특별한 혜택과 이상적인 경험을 선사합니다.</h6>
+        <a class="p_logn color_gr">자세히 보기</a>
+      </li>
+    
+      <li id="card2">
+        <img src="img/Genesis_KR_Home_Content_02_C15_630x358.jpg">
+        <h5 class="h5_400">GENESIS OWNERS</h5>
+        <h6>제네시스 차량의 견적, 구매상담 신청, 시승 신청 뿐 아니라 제네시스 강남 방문 예약 등 당신만의 제네시스를 찾는 여정을 지원합니다.</h6>
+        <a class="p_logn color_gr">자세히 보기</a>
+      </li>
   
+      <li id="card3">
+        <img src="img/Genesis_KR_Autoshows_Content_02_C15_630x358.jpg">
+        <h5 class="h5_400">GENESIS OWNERS</h5>
+        <h6>역동적이면서도 우아한 디자인과 최첨단 기술을 탑재한 제네시스 브랜드의 라인업을 살펴보세요.</h6>
+        <a class="p_logn color_gr">자세히 보기</a>
+      </li>
 
+   </ul>
+  </section>
+
+
+<!-- social section -->
+  <section class="social_container">
+    <h3 id="social_title">DISCOVER GENESIS</h3>
+    <ul id="social_ul" class="social_icon_wrap">
+      <li>
+        <a class="icon" href="https://www.facebook.com/GenesisWorldwide">
+          <svg viewBox="0 0 48 48">
+            <path fill="#898989" d="M22,36H26.5V25.5H31V21H26.5V18a1.43,1.43,0,0,1,1.33-1.5H31V12H27.25A5.32,5.32,0,0,0,22,17.25V21H19v4.5h3Z"></path>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="icon" href="https://www.instagram.com/genesisworldwide">
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="4"></circle>
+            <path fill="#898989" d="M35.93 19.05a9.27 9.27 0 0 0-.56-2.9 6.1 6.1 0 0 0-3.51-3.51 8.5 8.5 0 0 0-2.86-.56C27.67 12 27.26 12 24 12s-3.67 0-4.95.08a8.53 8.53 0 0 0-2.91.55A5.86 5.86 0 0 0 14 14a6 6 0 0 0-1.39 2.11 8.89 8.89 0 0 0-.55 2.89C12 20.3 12 20.7 12 24s0 3.66.08 4.95a8.72 8.72 0 0 0 .55 2.9A5.81 5.81 0 0 0 14 34a6.15 6.15 0 0 0 2.12 1.39A9.1 9.1 0 0 0 19 36c1.28.06 1.68.07 5 .07s3.7-.07 5-.07a9.1 9.1 0 0 0 2.92-.55A5.93 5.93 0 0 0 34 34a6 6 0 0 0 1.39-2.13 9.13 9.13 0 0 0 .55-2.87c.06-1.34.06-1.74.06-5s0-3.66-.07-4.95zM24 30.16A6.16 6.16 0 1 1 30.16 24 6.16 6.16 0 0 1 24 30.16zM30.41 19a1.44 1.44 0 1 1 1.44-1.44A1.43 1.43 0 0 1 30.41 19z"></path>
+          </svg>  
+        </a>
+      </li>
+      <li>
+        <a class="icon" href="https://www.youtube.com/genesisworldwide">
+          <svg viewBox="0 0 48 48">
+            <path fill="#898989" d="M38.74 18a6.53 6.53 0 0 0-1.2-3 4.27 4.27 0 0 0-3-1.28c-4.22-.3-10.54-.3-10.54-.3s-6.27 0-10.52.31a4.27 4.27 0 0 0-3 1.28 6.53 6.53 0 0 0-1.2 3A46.46 46.46 0 0 0 9 22.86v2.28A46.59 46.59 0 0 0 9.27 30a6.55 6.55 0 0 0 1.2 3 5 5 0 0 0 3.34 1.28c2.4.23 10.19.31 10.19.31s6.32 0 10.53-.32a4.3 4.3 0 0 0 3-1.27 6.55 6.55 0 0 0 1.2-3 46.59 46.59 0 0 0 .27-4.86v-2.28a46.46 46.46 0 0 0-.26-4.86zm-17.88 9.92v-8.47L29 23.69z"></path>
+          </svg>
+        </a> 
+      </li>
+    </ul>   
+  </section>
+  
+</main>
+
+<!-- scroll JS -->
+<script> 
+  function scrollFadeIn() {
+    console.log(document.documentElement.scrollTop);
+    console.log(document.getElementById("vehicle_ul").offsetTop);
+    console.log(document.getElementById("card_ul").offsetTop);
+    console.log(document.getElementById("social_title").offsetTop);
+    console.log(document.getElementById("social_ul").offsetTop);
+   
+
+    var bodyScrollTop = document.documentElement.scrollTop;   // 현재의 스크롤값
+
+    var vehicleOffsetTop = document.getElementById("vehicle_ul").offsetTop - 1025; //문서안의 상대적인 현재 위치 값
+    if (bodyScrollTop >= vehicleOffsetTop)  {
+      document.getElementById("vehicle1").style = "opacity: 1; margin-top:0px;";
+      document.getElementById("vehicle2").style = "opacity: 1; margin-top:0px;";
+      document.getElementById("vehicle3").style = "opacity: 1; margin-top:0px;";
+      document.getElementById("vehicle4").style = "opacity: 1; margin-top:0px;";
+    }
+
+    var cardOffsetTop = document.getElementById("card_ul").offsetTop - 830; //문서안의 상대적인 현재 위치 값
+    if (bodyScrollTop >= cardOffsetTop)  {
+      document.getElementById("card1").style = "opacity: 1; padding-top:0px;";
+      document.getElementById("card2").style = "opacity: 1; padding-top:0px;";
+      document.getElementById("card3").style = "opacity: 1; padding-top:0px;";
+    }
+
+    var socialOffsetTop = document.getElementById("social_title").offsetTop - 1050; //문서안의 상대적인 현재 위치 값
+    if (bodyScrollTop >= socialOffsetTop)  {
+      document.getElementById("social_title").style = "opacity: 1; padding-top:0px;";
+      document.getElementById("social_ul").style = "opacity: 1; padding-top:0px;";
+    }
+  }
+</script>
+
+
+<!-- footer 시작 -->
+ <footer>
+
+  <div class="footer_content_container">
+
+    <div class="footer_content_left">
+      
+       <h6 class="footer_list_title">GO TO</h6>
+       <ul class="footer_list_wrap h6_company">
+          <li><a>사이트맵</a> </li>
+          <li><a>이용약관</a> </li>
+          <li class="under_line"><a>개인정보 처리방침</a></li>
+          <li><a>보증안내</a> </li>
+          <li><a>저작권 안내</a> </li>
+          <li><a>자주묻는질문</a> </li>   
+          <li><a>제네시스 월드와이드</a></li>
+          <li><a>미디어 센터</a> </li>
+          <li><a>제네시스 챔피언십</a></li>
+       </ul>     
+      
+    </div>
+
+    <div class="footer_content_right">
+      <div class="footer_list_box">
+        <h6 class="footer_list_title">Have A Question</h6>
+        <ul class="footer_list_wrap h6_company">
+         <li class="under_line"><a>고객센터</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer_list_box">
+        <h6 class="footer_list_title">Already a member</h6>
+        <ul class="footer_list_wrap h6_company">
+          <li class="under_line"><a>로그인</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_list_box">
+        <h6 class="footer_list_title">Social Media</h6>
+        <ul class="footer_social_icon_wrap">
+          <li>
+            <a class="footer_icon" href="https://www.facebook.com/GenesisWorldwide">
+              <svg viewBox="0 0 48 48">
+                <path fill="#cd9a81" d="M22,36H26.5V25.5H31V21H26.5V18a1.43,1.43,0,0,1,1.33-1.5H31V12H27.25A5.32,5.32,0,0,0,22,17.25V21H19v4.5h3Z"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="footer_icon" href="https://www.instagram.com/genesisworldwide">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="4"></circle>
+                <path fill="#cd9a81" d="M35.93 19.05a9.27 9.27 0 0 0-.56-2.9 6.1 6.1 0 0 0-3.51-3.51 8.5 8.5 0 0 0-2.86-.56C27.67 12 27.26 12 24 12s-3.67 0-4.95.08a8.53 8.53 0 0 0-2.91.55A5.86 5.86 0 0 0 14 14a6 6 0 0 0-1.39 2.11 8.89 8.89 0 0 0-.55 2.89C12 20.3 12 20.7 12 24s0 3.66.08 4.95a8.72 8.72 0 0 0 .55 2.9A5.81 5.81 0 0 0 14 34a6.15 6.15 0 0 0 2.12 1.39A9.1 9.1 0 0 0 19 36c1.28.06 1.68.07 5 .07s3.7-.07 5-.07a9.1 9.1 0 0 0 2.92-.55A5.93 5.93 0 0 0 34 34a6 6 0 0 0 1.39-2.13 9.13 9.13 0 0 0 .55-2.87c.06-1.34.06-1.74.06-5s0-3.66-.07-4.95zM24 30.16A6.16 6.16 0 1 1 30.16 24 6.16 6.16 0 0 1 24 30.16zM30.41 19a1.44 1.44 0 1 1 1.44-1.44A1.43 1.43 0 0 1 30.41 19z"></path>
+              </svg>  
+            </a>
+          </li>
+          <li>
+            <a class="footer_icon" href="https://www.youtube.com/genesisworldwide">
+              <svg viewBox="0 0 48 48">
+                <path fill="#cd9a81" d="M38.74 18a6.53 6.53 0 0 0-1.2-3 4.27 4.27 0 0 0-3-1.28c-4.22-.3-10.54-.3-10.54-.3s-6.27 0-10.52.31a4.27 4.27 0 0 0-3 1.28 6.53 6.53 0 0 0-1.2 3A46.46 46.46 0 0 0 9 22.86v2.28A46.59 46.59 0 0 0 9.27 30a6.55 6.55 0 0 0 1.2 3 5 5 0 0 0 3.34 1.28c2.4.23 10.19.31 10.19.31s6.32 0 10.53-.32a4.3 4.3 0 0 0 3-1.27 6.55 6.55 0 0 0 1.2-3 46.59 46.59 0 0 0 .27-4.86v-2.28a46.46 46.46 0 0 0-.26-4.86zm-17.88 9.92v-8.47L29 23.69z"></path>
+              </svg>
+            </a> 
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer_bottom h6_company">
+    <h6 class="h6_company color_gr">© Copyright 2020 Hyundai Motor Company. All Rights Reserved.</h6>
+    <div class="lang_button p_logn">&nbsp;&nbsp;^&nbsp;&nbsp; 한국어</div>
+  </div>
+
+ </footer>
 
 
  
